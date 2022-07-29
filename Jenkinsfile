@@ -15,7 +15,7 @@ pipeline{
             }
         }
         stage("UnitTest"){
-            agent any
+            agent { label 'linux_slave'}
           steps{
                 echo "Testing code"
                 sh 'mvn test'
