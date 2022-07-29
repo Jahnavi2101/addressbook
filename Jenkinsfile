@@ -20,11 +20,7 @@ pipeline{
                 echo "Testing code"
                 sh 'mvn test'
             }
-            post{
-            always{
-                junit '/target/surefire-reports/*.xml'
-            }
-          }
+            
         }
         stage("Package"){
             agent any
